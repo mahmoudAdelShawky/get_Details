@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+            font-size: 12px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <title>get_Data</title>
+</head>
+<body class=" p-3  text-dark">
+    <!-- <h1>start project</h1> -->
+    <div class="container">
+        <div class="flavourPart">
+            <p class="bg-light">Table to get flavour details (Pectin)</p>
+            <table >
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="dropdown ">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                Flavours        
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                                <li><a class="dropdown-item" id="mango">mango</a></li>
+                                <li><a class="dropdown-item" id="orange">orange</a></li>
+                                <li><a class="dropdown-item" id="lemon">Lemon</a></li>
+                                <li><a class="dropdown-item " id="strawberry">Strawberry</a></li>
+                                <li><a class="dropdown-item" id="pineapple">pineapple</a></li>
+                                <li><a class="dropdown-item" id="apple">apple</a></li>
+                                <li><a class="dropdown-item " id="grapes">grapes</a></li>
+                                <li><a class="dropdown-item" id="vanilla">Vanilla</a></li>
+                                <li><a class="dropdown-item" id="peach">peach</a></li>
+                                <li><a class="dropdown-item" id="cola">cola</a></li> 
+                                </ul>
+                            </div> 
+                        </th>
+                        <th>Parameter</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>  
+                        <td id="fInput" rowspan="2">...</td>
+                        <td>color type</td>
+                        <td id="typeValue" >... </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>color conc</td>
+                        <td id="concValue" >...</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="flavourPart">
+            <p class="bg-light">Table to get details (Gelatin)</p>
+            <table >
+                <thead>
+                    <tr>
+                        <th>
+                            Batch No.
+                        </th>
+                        <th>Parameter</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>  
+                        <td  rowspan="9">
+                            <input id="batchNum" class="form-control" type="number">
+                        </td>
+                        <td>Batch amount /kg</td>
+                        <td id="bAmount" >... </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>water quantity /kg</td>
+                        <td id="waterQ" >...</td>
+                    </tr>
+                    <tr>
+                        <td>jelatin /kg</td>
+                        <td id="jelatin" >...</td>
+                    </tr>
+                    <tr>
+                        <td>starch</td>
+                        <td id="starch" >...</td>
+                    </tr>
+                    <tr>
+                        <td>sugar /kg</td>
+                        <td id="suger" >...</td>
+                    </tr>
+                    <tr>
+                        <td>glucouse /kg</td>
+                        <td id="glucouse" >...</td>
+                    </tr>
+                    <tr>
+                        <td>premix /kg</td>
+                        <td id="premix" >...</td>
+                    </tr>
+                    <tr>
+                        <td>water /L</td>
+                        <td id="water" >...</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <button id="submit" class="btn btn-primary w-100" type="button">submit</button>
+        </div>
+      <footer class="bg-light text-dark w-100 b-0  text-center text-lg-start">
+        <h3>Design By <a href="https://www.facebook.com/profile.php?id=100015913748229">Mahmoud Adel</a></h3>
+      </footer>
+
+    <!-- link javaScript file -->
+    <script src="js/script.js" ></script>
+    <script src="js/bootstrap.bundle.min.js" ></script>
+    <script src="js/all.min.js" ></script>
+</body>
+</html>
