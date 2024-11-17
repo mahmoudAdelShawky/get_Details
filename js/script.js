@@ -17,9 +17,9 @@ let colorConc = document.getElementById("concValue");
 
 submitBtn.addEventListener('click', function(event){
     let batch_amount = batchNum.value * 19.5;
-    let water_quantity = 50 / 71 * batch_amount;
-    let jelatin_u = 25 / 71 * batch_amount;
-    let starch_u = 1 / 71 * batch_amount;
+    let water_quantity = 50 / 81 * batch_amount;
+    let jelatin_u = 25 / 81 * batch_amount;
+    let starch_u = 1 / 81 * batch_amount;
     let suger_u =  29 * batchNum.value;
     let glucouse_u = 49 * batchNum.value ;
     let premix_u = batch_amount;
