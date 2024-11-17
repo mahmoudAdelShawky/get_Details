@@ -4,6 +4,7 @@ let batchAmount = document.getElementById("bAmount");
 let waterQu = document.getElementById("waterQ");
 let jelatin = document.getElementById("jelatin");
 let starch = document.getElementById("starch");
+let rework = document.getElementById("rework");
 let suger = document.getElementById("suger");
 let glucouse = document.getElementById("glucouse");
 let premix = document.getElementById("premix");
@@ -20,6 +21,7 @@ submitBtn.addEventListener('click', function(event){
     let water_quantity = 50 / 81 * batch_amount;
     let jelatin_u = 25 / 81 * batch_amount;
     let starch_u = 1 / 81 * batch_amount;
+    let rework_u = 5 / 81 * batch_amount;
     let suger_u =  29 * batchNum.value;
     let glucouse_u = 49 * batchNum.value ;
     let premix_u = batch_amount;
@@ -31,6 +33,7 @@ submitBtn.addEventListener('click', function(event){
     waterQu.innerHTML = water_quantity.toPrecision(4);
     jelatin.innerHTML = jelatin_u.toPrecision(4);
     starch.innerHTML = starch_u.toPrecision(4);
+    rework.innerHTML = rework_u.toPrecision(4);
     suger.innerHTML = suger_u.toPrecision(4);
     glucouse.innerHTML = glucouse_u.toPrecision(4);
     premix.innerHTML = premix_u.toPrecision(4);
