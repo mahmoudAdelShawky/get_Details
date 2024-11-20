@@ -9,19 +9,24 @@ let suger = document.getElementById("suger");
 let glucouse = document.getElementById("glucouse");
 let premix = document.getElementById("premix");
 let water = document.getElementById("water");
-let submitBtn = document.getElementById("submit");
+let new_water = document.getElementById("new_water");
+let new_jelatin = document.getElementById("new_jelatin");
+let new_starch = document.getElementById("new_starch");
+let new_rework = document.getElementById("new_rework");
+
 
 let flavoursInput = document.getElementById("fInput");
 let colorType = document.getElementById("typeValue");
 let colorConc = document.getElementById("concValue");
 
+let all_values = new_water.value + new_starch.value + new_rework.value + new_jelatin.value
 
 submitBtn.addEventListener('click', function(event){
     let batch_amount = batchNum.value * 19.5;
-    let water_quantity = 50 / 81 * batch_amount;
-    let jelatin_u = 25 / 81 * batch_amount;
-    let starch_u = 1 / 81 * batch_amount;
-    let rework_u = 5 / 81 * batch_amount;
+    let water_quantity = 50 / all_values * batch_amount;
+    let jelatin_u = 25 / all_values * batch_amount;
+    let starch_u = 1 / all_values * batch_amount;
+    let rework_u = 5 / all_values * batch_amount;
     let suger_u =  29 * batchNum.value;
     let glucouse_u = 49 * batchNum.value ;
     let premix_u = batch_amount;
