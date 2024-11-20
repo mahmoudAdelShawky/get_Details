@@ -9,36 +9,65 @@ let suger = document.getElementById("suger");
 let glucouse = document.getElementById("glucouse");
 let premix = document.getElementById("premix");
 let water = document.getElementById("water");
-let new_water = document.getElementById("new_water");
-let new_jelatin = document.getElementById("new_jelatin");
-let new_starch = document.getElementById("new_starch");
-let new_rework = document.getElementById("new_rework");
-
+let submitBtn = document.getElementById("submit");
 
 let flavoursInput = document.getElementById("fInput");
 let colorType = document.getElementById("typeValue");
 let colorConc = document.getElementById("concValue");
 
-let all_values = new_water.value + new_starch.value + new_rework.value + new_jelatin.value
+// add new feature
+let new_water =document.getElementById('new_water');
+let new_jelatin =document.getElementById('new_jelatin');
+let new_starch =document.getElementById('new_starch');
+let new_rework =document.getElementById('new_rework');
 
+let all_values;
+console.log(all_values)
+console.log(new_jelatin)
+console.log(new_water)
+console.log(new_starch)
+console.log(new_rework)
 submitBtn.addEventListener('click', function(event){
+    if (new_water.value === ""){
+        new_water.style.border = "1px solid #f00"
+    }else{
+        new_water.style.border = "1px solid #0f0"
+    }
+
+    if (new_jelatin.value === ""){
+        new_jelatin.style.border = "1px solid #f00"
+    }else{
+        new_water.style.border = "1px solid #0f0"
+    }
+    if (new_starch.value === ""){
+        new_starch.style.border = "1px solid #f00"
+    }else{
+        new_water.style.border = "1px solid #0f0"
+    }
+    if (new_rework.value === ""){
+        new_rework.style.border = "1px solid #f00"
+    }else{
+        new_water.style.border = "1px solid #0f0"
+    }
+    
+    all_values = Number(new_water.value) + Number(new_jelatin.value) + Number(new_starch.value) + Number(new_rework.value);
     let batch_amount = batchNum.value * 19.5;
-    let water_quantity = 50 / all_values * batch_amount;
-    let jelatin_u = 25 / all_values * batch_amount;
-    let starch_u = 1 / all_values * batch_amount;
-    let rework_u = 5 / all_values * batch_amount;
+    let water_quantity = Number(new_water.value) / all_values * batch_amount;
+    let jelatin_u = Number(new_jelatin.value) / all_values * batch_amount;
+    let starch_u = Number(new_starch.value) / all_values * batch_amount;
+    let rework_u = Number(new_rework.value) / all_values * batch_amount;
     let suger_u =  29 * batchNum.value;
     let glucouse_u = 49 * batchNum.value ;
     let premix_u = batch_amount;
     let water_u = 2.3 * batchNum.value;
 
-    console.log(batchNum)
 
     batchAmount.innerHTML = batch_amount.toPrecision(4);
     waterQu.innerHTML = water_quantity.toPrecision(4);
     jelatin.innerHTML = jelatin_u.toPrecision(4);
     starch.innerHTML = starch_u.toPrecision(4);
     rework.innerHTML = rework_u.toPrecision(4);
+
     suger.innerHTML = suger_u.toPrecision(4);
     glucouse.innerHTML = glucouse_u.toPrecision(4);
     premix.innerHTML = premix_u.toPrecision(4);
