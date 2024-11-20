@@ -37,17 +37,17 @@ submitBtn.addEventListener('click', function(event){
     if (new_jelatin.value === ""){
         new_jelatin.style.border = "1px solid #f00"
     }else{
-        new_water.style.border = "1px solid #0f0"
+        new_jelatin.style.border = "1px solid #0f0"
     }
     if (new_starch.value === ""){
         new_starch.style.border = "1px solid #f00"
     }else{
-        new_water.style.border = "1px solid #0f0"
+        new_starch.style.border = "1px solid #0f0"
     }
     if (new_rework.value === ""){
         new_rework.style.border = "1px solid #f00"
     }else{
-        new_water.style.border = "1px solid #0f0"
+        new_rework.style.border = "1px solid #0f0"
     }
     
     all_values = Number(new_water.value) + Number(new_jelatin.value) + Number(new_starch.value) + Number(new_rework.value);
