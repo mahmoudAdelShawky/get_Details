@@ -51,7 +51,7 @@ submitBtn.addEventListener('click', function(event){
     }
     
     all_values = Number(new_water.value) + Number(new_jelatin.value) + Number(new_starch.value) + Number(new_rework.value);
-    let batch_amount = batchNum.value * 19.5;
+    let batch_amount = batchNum.value * 20;
     let water_quantity = Number(new_water.value) / all_values * batch_amount;
     let jelatin_u = Number(new_jelatin.value) / all_values * batch_amount;
     let starch_u = Number(new_starch.value) / all_values * batch_amount;
@@ -59,7 +59,7 @@ submitBtn.addEventListener('click', function(event){
     let suger_u =  29 * batchNum.value;
     let glucouse_u = 49 * batchNum.value ;
     let premix_u = batch_amount;
-    let water_u = 2.3 * batchNum.value;
+    let water_u = 2 * batchNum.value;
 
 
     batchAmount.innerHTML = batch_amount.toPrecision(4);
