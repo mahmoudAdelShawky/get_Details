@@ -57,7 +57,7 @@ submitBtn.addEventListener('click', function(event){
     let starch_u = Number(new_starch.value) / all_values * batch_amount;
     let rework_u = Number(new_rework.value) / all_values * batch_amount;
     let suger_u =  29 * batchNum.value;
-    let glucouse_u = 49 * batchNum.value ;
+    let glucouse_u = 45 * batchNum.value ;
     let premix_u = batch_amount;
     let water_u = 2 * batchNum.value;
 
